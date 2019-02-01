@@ -30,14 +30,18 @@ header {
 }
 
 ul {
+	list-style-type: none;
 	/*align-items: left;*/
- 	text-align: left;
+ 	text-align: center;
  	/*position: relative;
  	margin-top: 10px;
- 	left: -120px;*/
+ 	left: 120px;*/
  	align-self: center;
  	margin-top: 0px;
  	margin-bottom: 0px;
+ 	overflow: hidden;
+ 	padding: 0px;
+ 	margin: 0px;
  }
 
 li{
@@ -51,9 +55,7 @@ li{
     /*border-radius: 15px;
     background-color: #ffffff;*/
     width: auto;
-    text-align: justify-all;
-
-
+    text-align: center;
 }
 
 
@@ -107,8 +109,7 @@ footer {
  .gridcontainer{
  	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-
-
+	margin-top: 0px;
  }
 
  .botones{
@@ -116,5 +117,32 @@ footer {
 
  	/*left: -120px;*/
 
+
+ }
+
+ @media screen and (max-width: 900px) {
+ 	li{
+ 		font-size: 12px;
+ 	}
+
+ 	h2{
+ 		font-size: 12px;
+ 		width: 100px;
+ 	}
+
+ 	header{
+
+ 		height: auto;
+ 	}
+
+ 	main{ 		
+ 		grid-template-columns: auto;
+ 		margin: 0px 15px;
+ 	}
+
+ 	.contenido{
+ 		position: relative;
+ 		top:80px;
+ 	}
 
  }
