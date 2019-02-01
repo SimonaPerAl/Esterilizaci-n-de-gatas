@@ -2,8 +2,13 @@ body {
 	font-family: "Open Sans", sans-serif;
 	background-color: #ffffff;
 	margin: 0 ;
-
 }
+
+ .gridcontainer{
+ 	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	margin-top: 0px;
+ }
 
 h2{
 	color: #ffffff;
@@ -20,8 +25,7 @@ a{
 	font-weight: bold;
 }
 
-header {
-		
+header {		
 	background-color: #006600;
 	width: 100%;
 	position: fixed;
@@ -29,35 +33,19 @@ header {
 	height: 120px;
 }
 
-ul {
-	list-style-type: none;
-	/*align-items: left;*/
+ul {	
  	text-align: center;
- 	/*position: relative;
- 	margin-top: 10px;
- 	left: 120px;*/
- 	align-self: center;
- 	margin-top: 0px;
- 	margin-bottom: 0px;
- 	overflow: hidden;
- 	padding: 0px;
- 	margin: 0px;
+ 	align-self: center; 	
  }
 
 li{
 	display: inline-block;
-    /*border: 50px;*/
-    margin-right: 0px;
     font-size:x-large;
     font-weight: bold;
     color: #ffffff;
     padding: 10px;
-    /*border-radius: 15px;
-    background-color: #ffffff;*/
-    width: auto;
-    text-align: center;
+    width: auto;    
 }
-
 
 li:hover {
 	background-color: #c0edcd;
@@ -72,17 +60,6 @@ main {
 
 p {
 	text-align: justify;
-}
-
-footer {
-	background-color: #006600;
-	width: 100%;
-	color: #ffffff;
-	text-align: center;
-	height: auto;
-	position: relative;
-	bottom: -150px;
-	font-size: small; 
 }
 
 .right{
@@ -106,23 +83,27 @@ footer {
 	color: #53c653;
  }
 
- .gridcontainer{
- 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	margin-top: 0px;
- }
-
- .botones{
- 	
-
- 	/*left: -120px;*/
-
-
- }
+footer {
+	background-color: #006600;
+	width: 100%;
+	color: #ffffff;
+	text-align: center;
+	height: auto;
+	position: relative;
+	bottom: -150px;
+	font-size: small; 
+	padding: 5px;
+}
 
  @media screen and (max-width: 900px) {
- 	li{
- 		font-size: 12px;
+
+	main{ 		
+ 		grid-template-columns: auto;
+ 		margin: 0px 15px;
+ 	}
+
+ 	header{
+ 		height: auto;
  	}
 
  	h2{
@@ -130,19 +111,13 @@ footer {
  		width: 100px;
  	}
 
- 	header{
-
- 		height: auto;
- 	}
-
- 	main{ 		
- 		grid-template-columns: auto;
- 		margin: 0px 15px;
+ 	li{
+ 		font-size: 12px;
+ 		padding: 3px;
  	}
 
  	.contenido{
  		position: relative;
  		top:80px;
  	}
-
  }
